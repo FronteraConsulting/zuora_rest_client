@@ -146,12 +146,18 @@ module ZuoraRestClient
     def process_response(response)
       if response.headers['Content-Type'].to_s.start_with?('application/json')
         hash = MultiJson.load(response.body)
-        Result.new(hash, recurse_over_arrays: true)
+        Result.new(hash.merge(response_headers(response)), recurse_over_arrays: true)
       elsif response.headers['Content-Type'].to_s.start_with?('text/xml')
         Result.new(Nori.new.parse(response.body), recurse_over_arrays: true)
       else
         response
       end
+    end
+
+    def response_headers(response)
+      {response_status: response.status,
+       response_headers: response.response_headers,
+       reason_phrase: response.reason_phrase}
     end
 
     def rest_connection(use_api_proxy = false)
