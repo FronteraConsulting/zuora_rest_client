@@ -145,8 +145,12 @@ module ZuoraRestClient
 
     def process_response(response)
       if response.headers['Content-Type'].to_s.start_with?('application/json')
-        hash = MultiJson.load(response.body)
-        Result.new(hash, recurse_over_arrays: true)
+        object = MultiJson.load(response.body)
+        if object.is_a? Array
+          object.map { |item| Result.new(item, recurse_over_arrays: true) }
+        else
+          Result.new(object, recurse_over_arrays: true)
+        end
       elsif response.headers['Content-Type'].to_s.start_with?('text/xml')
         Result.new(Nori.new.parse(response.body), recurse_over_arrays: true)
       else
