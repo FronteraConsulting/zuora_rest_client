@@ -15,7 +15,7 @@ http_interactions:
       Accept-Encoding:
       - gzip,deflate
       Date:
-      - Wed, 02 Aug 2017 14:48:10 GMT
+      - Fri, 18 May 2018 20:53:06 GMT
       Content-Type:
       - application/json
       Apiaccesskeyid:
@@ -31,29 +31,29 @@ http_interactions:
       - application/json; charset=utf-8
       Server:
       - kong/0.9.9
-      X-Request-Id:
-      - bf151689-f22f-4944-a60e-83b4b6770ba6
+      Zuora-Request-Id:
+      - 58399b83-f985-4b20-9ce3-c3c0dd705abf
       X-Kong-Upstream-Latency:
-      - '119'
+      - '376'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Wed, 02 Aug 2017 14:48:11 GMT
+      - Fri, 18 May 2018 20:53:07 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Wed, 02 Aug 2017 14:48:11 GMT
+      - Fri, 18 May 2018 20:53:07 GMT
       Content-Length:
       - '57'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"Success":true,"Id":"2c92a0fc5d8298f5015da36b18a34507"}
+      string: '{"Success":true,"Id":"2c92a0fc636cad9f0163750710097ad5"}
 
 '
     http_version: 
-  recorded_at: Wed, 02 Aug 2017 14:48:11 GMT
+  recorded_at: Fri, 18 May 2018 20:53:07 GMT
 recorded_with: VCR 3.0.3

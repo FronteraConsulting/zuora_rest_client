@@ -16,7 +16,7 @@ http_interactions:
       Accept-Encoding:
       - gzip,deflate
       Date:
-      - Wed, 02 Aug 2017 14:48:10 GMT
+      - Fri, 18 May 2018 20:53:05 GMT
       Content-Type:
       - application/json
       Apiaccesskeyid:
@@ -30,22 +30,28 @@ http_interactions:
     headers:
       Content-Type:
       - application/json;charset=utf-8
+      Content-Security-Policy-Report-Only:
+      - media-src 'none'; img-src 'self' *.zuora.com; object-src *.zuora.com; script-src
+        'unsafe-inline' 'unsafe-eval' 'self' https://api.tcell.io/; manifest-src 'none';
+        style-src 'unsafe-inline' 'self'; font-src 'self'; child-src 'none'; frame-src
+        'none'; connect-src 'self' https://api.tcell.io/ https://input.tcell.io/;
+        report-uri https://input.tcell.io/csp/e14f749ededb34ed6f61ee047073e7d5c02428ea31e0b1249ed5bdb2d99decec?tid=0b8689ee-c80c-49f6-b2bb-bbd1a7c17934
       Server:
       - Zuora App
-      X-Request-Id:
-      - f3ecba32-8807-4312-8891-905029229c0d
+      Zuora-Request-Id:
+      - 3593f472-66c5-4887-97ab-e0d095a2464d
       X-Kong-Upstream-Latency:
-      - '145'
+      - '267'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Wed, 02 Aug 2017 14:48:10 GMT
+      - Fri, 18 May 2018 20:53:05 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Wed, 02 Aug 2017 14:48:10 GMT
+      - Fri, 18 May 2018 20:53:05 GMT
       Content-Length:
       - '165'
       Connection:
@@ -57,10 +63,10 @@ http_interactions:
       string: |-
         {
           "success" : true,
-          "accountId" : "2c92a0fc5d8298f6015da36b14df1d04",
-          "accountNumber" : "Z00324067",
-          "paymentMethodId" : "2c92a0fc5d8298f6015da36b14f31d0a"
+          "accountId" : "2c92a0fc636cad92016375070a0e3b22",
+          "accountNumber" : "Z00324103",
+          "paymentMethodId" : "2c92a0fc636cad92016375070a493b28"
         }
     http_version: 
-  recorded_at: Wed, 02 Aug 2017 14:48:10 GMT
+  recorded_at: Fri, 18 May 2018 20:53:05 GMT
 recorded_with: VCR 3.0.3

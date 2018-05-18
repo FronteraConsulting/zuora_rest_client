@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://rest.zuora.com/v1/object/account/2c92a0fc5d8298f5015da36b18a34507
+    uri: https://rest.zuora.com/v1/object/account/2c92a0fc636cad9f0163750710097ad5
     body:
       encoding: UTF-8
       string: '{"Batch":"Batch2"}'
@@ -14,7 +14,7 @@ http_interactions:
       Accept-Encoding:
       - gzip,deflate
       Date:
-      - Wed, 02 Aug 2017 14:48:11 GMT
+      - Fri, 18 May 2018 20:53:07 GMT
       Content-Type:
       - application/json
       Apiaccesskeyid:
@@ -30,34 +30,34 @@ http_interactions:
       - application/json; charset=utf-8
       Server:
       - kong/0.9.9
-      X-Request-Id:
-      - 5b5e3203-238a-42fc-9c64-d5f31501517d
+      Zuora-Request-Id:
+      - 554da130-3174-4791-a49e-0eae5edacc04
       X-Kong-Upstream-Latency:
-      - '131'
+      - '81'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Wed, 02 Aug 2017 14:48:11 GMT
+      - Fri, 18 May 2018 20:53:07 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Wed, 02 Aug 2017 14:48:11 GMT
+      - Fri, 18 May 2018 20:53:07 GMT
       Content-Length:
       - '57'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"Success":true,"Id":"2c92a0fc5d8298f5015da36b18a34507"}
+      string: '{"Success":true,"Id":"2c92a0fc636cad9f0163750710097ad5"}
 
 '
     http_version: 
-  recorded_at: Wed, 02 Aug 2017 14:48:11 GMT
+  recorded_at: Fri, 18 May 2018 20:53:07 GMT
 - request:
     method: get
-    uri: https://rest.zuora.com/v1/object/account/2c92a0fc5d8298f5015da36b18a34507
+    uri: https://rest.zuora.com/v1/object/account/2c92a0fc636cad9f0163750710097ad5
     body:
       encoding: UTF-8
       string: ''
@@ -69,7 +69,7 @@ http_interactions:
       Accept-Encoding:
       - gzip,deflate
       Date:
-      - Wed, 02 Aug 2017 14:48:11 GMT
+      - Fri, 18 May 2018 20:53:07 GMT
       Content-Type:
       - application/json
       Apiaccesskeyid:
@@ -85,31 +85,31 @@ http_interactions:
       - application/json; charset=utf-8
       Server:
       - kong/0.9.9
-      X-Request-Id:
-      - 1a92adaa-9a16-492b-afdb-b731e4a442df
+      Zuora-Request-Id:
+      - e1bcfcaf-ef2c-49c2-850a-fa6195de0a09
       X-Kong-Upstream-Latency:
-      - '91'
+      - '47'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Wed, 02 Aug 2017 14:48:11 GMT
+      - Fri, 18 May 2018 20:53:07 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Wed, 02 Aug 2017 14:48:11 GMT
+      - Fri, 18 May 2018 20:53:07 GMT
       Content-Length:
       - '662'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"AccountNumber":"Z00324068","AllowInvoiceEdit":false,"InvoiceTemplateId":"2c92a0fb49377eae0149505ce4814ece","AutoPay":false,"InvoiceDeliveryPrefsPrint":false,"UpdatedDate":"2017-08-02T10:48:11.000-04:00","CreditBalance":0,"BillCycleDay":15,"BcdSettingOption":"ManualSet","PaymentTerm":"Due
-        Upon Receipt","SuppressDunning__c":"false","Batch":"Batch2","CreatedById":"2c92a0fe5d8298e1015da3596e331713","CreatedDate":"2017-08-02T10:48:11.000-04:00","Name":"Test
-        Account","Balance":0,"Id":"2c92a0fc5d8298f5015da36b18a34507","InvoiceDeliveryPrefsEmail":false,"Currency":"USD","Status":"Draft","TotalInvoiceBalance":0,"UpdatedById":"2c92a0fe5d8298e1015da3596e331713"}
+      string: '{"AccountNumber":"Z00324104","AllowInvoiceEdit":false,"InvoiceTemplateId":"2c92a0fb49377eae0149505ce4814ece","AutoPay":false,"InvoiceDeliveryPrefsPrint":false,"UpdatedDate":"2018-05-18T16:53:07.000-04:00","CreditBalance":0,"BillCycleDay":15,"BcdSettingOption":"ManualSet","PaymentTerm":"Due
+        Upon Receipt","SuppressDunning__c":"false","Batch":"Batch2","CreatedById":"2c92a0fe5d8298e1015da3596e331713","CreatedDate":"2018-05-18T16:53:07.000-04:00","Name":"Test
+        Account","Balance":0,"Id":"2c92a0fc636cad9f0163750710097ad5","InvoiceDeliveryPrefsEmail":false,"Currency":"USD","Status":"Draft","TotalInvoiceBalance":0,"UpdatedById":"2c92a0fe5d8298e1015da3596e331713"}
 
 '
     http_version: 
-  recorded_at: Wed, 02 Aug 2017 14:48:11 GMT
+  recorded_at: Fri, 18 May 2018 20:53:07 GMT
 recorded_with: VCR 3.0.3

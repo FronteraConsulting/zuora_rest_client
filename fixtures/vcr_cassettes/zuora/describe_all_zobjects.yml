@@ -14,7 +14,7 @@ http_interactions:
       Accept-Encoding:
       - gzip,deflate
       Date:
-      - Wed, 02 Aug 2017 14:48:09 GMT
+      - Fri, 18 May 2018 20:53:05 GMT
       Content-Type:
       - application/json
       Apiaccesskeyid:
@@ -28,14 +28,20 @@ http_interactions:
     headers:
       Content-Type:
       - text/xml;charset=UTF-8
+      Content-Security-Policy-Report-Only:
+      - media-src 'none'; img-src 'self' *.zuora.com; object-src *.zuora.com; script-src
+        'unsafe-inline' 'unsafe-eval' 'self' https://api.tcell.io/; manifest-src 'none';
+        style-src 'unsafe-inline' 'self'; font-src 'self'; child-src 'none'; frame-src
+        'none'; connect-src 'self' https://api.tcell.io/ https://input.tcell.io/;
+        report-uri https://input.tcell.io/csp/e14f749ededb34ed6f61ee047073e7d5c02428ea31e0b1249ed5bdb2d99decec?tid=0baf1fce-ce33-46ef-aa87-30727f392cb0
       Content-Language:
       - en-US
       Server:
       - Zuora App
-      X-Request-Id:
-      - ae8fb6ab-41a5-4971-aa20-c95700c735a0
+      Zuora-Request-Id:
+      - a854565e-6cad-44cf-88ae-856cb1902f1c
       X-Kong-Upstream-Latency:
-      - '52'
+      - '46'
       X-Kong-Proxy-Latency:
       - '0'
       Vary:
@@ -43,15 +49,15 @@ http_interactions:
       Content-Encoding:
       - gzip
       Expires:
-      - Wed, 02 Aug 2017 14:48:10 GMT
+      - Fri, 18 May 2018 20:53:05 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Wed, 02 Aug 2017 14:48:10 GMT
+      - Fri, 18 May 2018 20:53:05 GMT
       Content-Length:
-      - '1066'
+      - '1068'
       Connection:
       - keep-alive
       Set-Cookie:
@@ -101,23 +107,23 @@ http_interactions:
         \    <label>Journal Entry</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/JournalEntryItem\">\r\n
         \    <name>JournalEntryItem</name>\r\n     <label>Journal Entry Item</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
         href=\"https://api.zuora.com/rest/api/describe/JournalRun\">\r\n     <name>JournalRun</name>\r\n
-        \    <label>Journal Run</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/Order\">\r\n
-        \    <name>Order</name>\r\n     <label>Order</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
-        href=\"https://api.zuora.com/rest/api/describe/OrderAction\">\r\n     <name>OrderAction</name>\r\n
-        \    <label>Order Action</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/OrderMrr\">\r\n
+        \    <label>Journal Run</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/OrderElp\">\r\n
+        \    <name>OrderElp</name>\r\n     <label>Order Elp</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
+        href=\"https://api.zuora.com/rest/api/describe/OrderItem\">\r\n     <name>OrderItem</name>\r\n
+        \    <label>Order Item</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/OrderMrr\">\r\n
         \    <name>OrderMrr</name>\r\n     <label>Order Mrr</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
-        href=\"https://api.zuora.com/rest/api/describe/OrderQuantity\">\r\n     <name>OrderQuantity</name>\r\n
-        \    <label>Order Quantity</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/OrderTcb\">\r\n
-        \    <name>OrderTcb</name>\r\n     <label>Order Tcb</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
-        href=\"https://api.zuora.com/rest/api/describe/OrderTcv\">\r\n     <name>OrderTcv</name>\r\n
-        \    <label>Order Tcv</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/Payment\">\r\n
-        \    <name>Payment</name>\r\n     <label>Payment</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
-        href=\"https://api.zuora.com/rest/api/describe/PaymentMethod\">\r\n     <name>PaymentMethod</name>\r\n
-        \    <label>Payment Method</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/PaymentMethodTransactionLog\">\r\n
+        href=\"https://api.zuora.com/rest/api/describe/OrderTcb\">\r\n     <name>OrderTcb</name>\r\n
+        \    <label>Order Tcb</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/OrderTcv\">\r\n
+        \    <name>OrderTcv</name>\r\n     <label>Order Tcv</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
+        href=\"https://api.zuora.com/rest/api/describe/Payment\">\r\n     <name>Payment</name>\r\n
+        \    <label>Payment</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/PaymentMethod\">\r\n
+        \    <name>PaymentMethod</name>\r\n     <label>Payment Method</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
+        href=\"https://api.zuora.com/rest/api/describe/PaymentMethodTransactionLog\">\r\n
         \    <name>PaymentMethodTransactionLog</name>\r\n     <label>Payment Method
         Transaction Log</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/UpdaterDetail\">\r\n
         \    <name>UpdaterDetail</name>\r\n     <label>Payment Method Update</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
-        href=\"https://api.zuora.com/rest/api/describe/PaymentTransactionLog\">\r\n
+        href=\"https://api.zuora.com/rest/api/describe/PaymentRun\">\r\n     <name>PaymentRun</name>\r\n
+        \    <label>Payment Run</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/PaymentTransactionLog\">\r\n
         \    <name>PaymentTransactionLog</name>\r\n     <label>Payment Transaction
         Log</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/ProcessedUsage\">\r\n
         \    <name>ProcessedUsage</name>\r\n     <label>Processed Usage</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
@@ -172,5 +178,5 @@ http_interactions:
         \    <label>Updater Batch</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/Usage\">\r\n
         \    <name>Usage</name>\r\n     <label>Usage</label>\r\n</object>\r\n\r\n\r\n\r\n</objects>\r\n"
     http_version: 
-  recorded_at: Wed, 02 Aug 2017 14:48:10 GMT
+  recorded_at: Fri, 18 May 2018 20:53:05 GMT
 recorded_with: VCR 3.0.3

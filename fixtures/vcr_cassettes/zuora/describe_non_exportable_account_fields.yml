@@ -14,7 +14,7 @@ http_interactions:
       Accept-Encoding:
       - gzip,deflate
       Date:
-      - Wed, 02 Aug 2017 14:48:09 GMT
+      - Fri, 18 May 2018 20:53:04 GMT
       Content-Type:
       - application/json
       Apiaccesskeyid:
@@ -28,14 +28,20 @@ http_interactions:
     headers:
       Content-Type:
       - text/xml;charset=UTF-8
+      Content-Security-Policy-Report-Only:
+      - media-src 'none'; img-src 'self' *.zuora.com; object-src *.zuora.com; script-src
+        'unsafe-inline' 'unsafe-eval' 'self' https://api.tcell.io/; manifest-src 'none';
+        style-src 'unsafe-inline' 'self'; font-src 'self'; child-src 'none'; frame-src
+        'none'; connect-src 'self' https://api.tcell.io/ https://input.tcell.io/;
+        report-uri https://input.tcell.io/csp/e14f749ededb34ed6f61ee047073e7d5c02428ea31e0b1249ed5bdb2d99decec?tid=16bf11e3-f804-479d-a1bb-eee271883707
       Content-Language:
       - en-US
       Server:
       - Zuora App
-      X-Request-Id:
-      - 59719c6f-21db-46e9-bdc1-50e3a4bf1b2c
+      Zuora-Request-Id:
+      - bcfafd08-6d3b-4d88-909a-b2305bc65d8b
       X-Kong-Upstream-Latency:
-      - '89'
+      - '88'
       X-Kong-Proxy-Latency:
       - '0'
       Vary:
@@ -43,15 +49,15 @@ http_interactions:
       Content-Encoding:
       - gzip
       Expires:
-      - Wed, 02 Aug 2017 14:48:09 GMT
+      - Fri, 18 May 2018 20:53:04 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Wed, 02 Aug 2017 14:48:09 GMT
+      - Fri, 18 May 2018 20:53:04 GMT
       Content-Length:
-      - '2689'
+      - '2722'
       Connection:
       - keep-alive
       Set-Cookie:
@@ -206,11 +212,17 @@ http_interactions:
         \        <custom>true</custom>\r\n         <maxlength>255</maxlength>\r\n
         \        <required>false</required>\r\n         <type>text</type>\r\n         <contexts>\r\n
         \           <context>soap</context>\r\n            <context>export</context>\r\n
-        \        </contexts>\r\n      </field>\r\n      <field>\r\n         <name>CommunicationProfileId</name>\r\n
-        \        <label>CommunicationProfile ID</label>\r\n         <selectable>true</selectable>\r\n
+        \        </contexts>\r\n      </field>\r\n      <field>\r\n         <name>CCemail__c</name>\r\n
+        \        <label>CCemail</label>\r\n         <selectable>true</selectable>\r\n
         \        <createable>true</createable>\r\n         <updateable>true</updateable>\r\n
-        \        <filterable>true</filterable>\r\n         <custom>false</custom>\r\n
-        \        <maxlength></maxlength>\r\n         <required>false</required>\r\n
+        \        <filterable>true</filterable>\r\n         <custom>true</custom>\r\n
+        \        <maxlength>255</maxlength>\r\n         <required>false</required>\r\n
+        \        <type>text</type>\r\n         <contexts>\r\n            <context>soap</context>\r\n
+        \           <context>export</context>\r\n         </contexts>\r\n      </field>\r\n
+        \     <field>\r\n         <name>CommunicationProfileId</name>\r\n         <label>CommunicationProfile
+        ID</label>\r\n         <selectable>true</selectable>\r\n         <createable>true</createable>\r\n
+        \        <updateable>true</updateable>\r\n         <filterable>true</filterable>\r\n
+        \        <custom>false</custom>\r\n         <maxlength></maxlength>\r\n         <required>false</required>\r\n
         \        <type>text</type>\r\n         <contexts>\r\n            <context>soap</context>\r\n
         \           <context>export</context>\r\n         </contexts>\r\n      </field>\r\n
         \     <field>\r\n         <name>CreatedById</name>\r\n         <label>Created
@@ -485,6 +497,13 @@ http_interactions:
         \        <maxlength></maxlength>\r\n         <required>false</required>\r\n
         \        <type>date</type>\r\n         <contexts>\r\n            <context>soap</context>\r\n
         \           <context>export</context>\r\n         </contexts>\r\n      </field>\r\n
+        \     <field>\r\n         <name>TaxExemptEntityUseCode</name>\r\n         <label>Tax
+        Exempt Entity/Use Code</label>\r\n         <selectable>true</selectable>\r\n
+        \        <createable>true</createable>\r\n         <updateable>true</updateable>\r\n
+        \        <filterable>true</filterable>\r\n         <custom>false</custom>\r\n
+        \        <maxlength></maxlength>\r\n         <required>false</required>\r\n
+        \        <type>text</type>\r\n         <contexts>\r\n            <context>soap</context>\r\n
+        \           <context>export</context>\r\n         </contexts>\r\n      </field>\r\n
         \     <field>\r\n         <name>TaxExemptExpirationDate</name>\r\n         <label>Tax
         Exempt Expiration Date</label>\r\n         <selectable>true</selectable>\r\n
         \        <createable>true</createable>\r\n         <updateable>true</updateable>\r\n
@@ -573,5 +592,5 @@ http_interactions:
         \        <name>SoldToContact</name>\r\n         <label>Sold To</label>    \r\n
         \     </object>\r\n   </related-objects>\r\n</object>\r\n\r\n"
     http_version: 
-  recorded_at: Wed, 02 Aug 2017 14:48:09 GMT
+  recorded_at: Fri, 18 May 2018 20:53:04 GMT
 recorded_with: VCR 3.0.3

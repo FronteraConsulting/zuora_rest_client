@@ -151,7 +151,7 @@ module ZuoraRestClient
     end
 
     def process_response(response)
-      if response.success?
+      if response.success? || response.status == 404
         if response.headers['Content-Type'].to_s.start_with?('application/json')
           object = MultiJson.load(response.body)
           if object.is_a? Array

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rest.zuora.com/v1/accounts/2c92a0fc5d8298f6015da36b14df1d04/summary
+    uri: https://rest.zuora.com/v1/accounts/2c92a0fc636cad92016375070a0e3b22/summary
     body:
       encoding: UTF-8
       string: ''
@@ -14,7 +14,7 @@ http_interactions:
       Accept-Encoding:
       - gzip,deflate
       Date:
-      - Wed, 02 Aug 2017 14:48:10 GMT
+      - Fri, 18 May 2018 20:53:06 GMT
       Content-Type:
       - application/json
       Apiaccesskeyid:
@@ -28,24 +28,30 @@ http_interactions:
     headers:
       Content-Type:
       - application/json;charset=utf-8
+      Content-Security-Policy-Report-Only:
+      - media-src 'none'; img-src 'self' *.zuora.com; object-src *.zuora.com; script-src
+        'unsafe-inline' 'unsafe-eval' 'self' https://api.tcell.io/; manifest-src 'none';
+        style-src 'unsafe-inline' 'self'; font-src 'self'; child-src 'none'; frame-src
+        'none'; connect-src 'self' https://api.tcell.io/ https://input.tcell.io/;
+        report-uri https://input.tcell.io/csp/e14f749ededb34ed6f61ee047073e7d5c02428ea31e0b1249ed5bdb2d99decec?tid=ac1c754a-cefd-40f3-a72b-de8e193a556f
       Server:
       - Zuora App
-      X-Request-Id:
-      - 1611a524-1eac-4ca3-aea2-6dee47457a0d
+      Zuora-Request-Id:
+      - 5a3248b1-0dd3-480e-be26-41f45324c87d
       X-Kong-Upstream-Latency:
-      - '91'
+      - '208'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Wed, 02 Aug 2017 14:48:10 GMT
+      - Fri, 18 May 2018 20:53:06 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Wed, 02 Aug 2017 14:48:10 GMT
+      - Fri, 18 May 2018 20:53:06 GMT
       Content-Length:
-      - '2204'
+      - '2229'
       Connection:
       - keep-alive
       Set-Cookie:
@@ -55,9 +61,9 @@ http_interactions:
       string: |-
         {
           "basicInfo" : {
-            "id" : "2c92a0fc5d8298f6015da36b14df1d04",
+            "id" : "2c92a0fc636cad92016375070a0e3b22",
             "name" : "Test Account",
-            "accountNumber" : "Z00324067",
+            "accountNumber" : "Z00324103",
             "balance" : 0E-9,
             "lastInvoiceDate" : null,
             "lastPaymentDate" : null,
@@ -83,11 +89,12 @@ http_interactions:
             "TestAccountField__c" : null,
             "SuppressDunning__c" : null,
             "ACHVerificationCode__c" : null,
+            "CCemail__c" : null,
             "publisher__c" : null,
             "DellAffinityNo__c" : null,
             "ACHVerificationTimestamp__c" : null,
             "defaultPaymentMethod" : {
-              "id" : "2c92a0fc5d8298f6015da36b14f31d0a",
+              "id" : "2c92a0fc636cad92016375070a493b28",
               "paymentMethodType" : "CreditCard",
               "creditCardNumber" : "************1111",
               "creditCardExpirationMonth" : 12,
@@ -96,7 +103,7 @@ http_interactions:
             }
           },
           "billToContact" : {
-            "id" : "2c92a0fc5d8298f6015da36b14e21d05",
+            "id" : "2c92a0fc636cad92016375070a1d3b23",
             "firstName" : "Test",
             "lastName" : "User",
             "address1" : null,
@@ -113,7 +120,7 @@ http_interactions:
             "State2__c" : null
           },
           "soldToContact" : {
-            "id" : "2c92a0fc5d8298f6015da36b14e91d07",
+            "id" : "2c92a0fc636cad92016375070a293b25",
             "firstName" : "Test",
             "lastName" : "User",
             "address1" : null,
@@ -137,5 +144,5 @@ http_interactions:
           "success" : true
         }
     http_version: 
-  recorded_at: Wed, 02 Aug 2017 14:48:10 GMT
+  recorded_at: Fri, 18 May 2018 20:53:06 GMT
 recorded_with: VCR 3.0.3
