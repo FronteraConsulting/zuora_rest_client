@@ -10,6 +10,9 @@ require 'net/http'
 require 'addressable/uri'
 
 module ZuoraRestClient
+
+  class ConnectionError < StandardError; end
+
   class Connection
 
     DEFAULT_OPTIONS = {
@@ -66,8 +69,12 @@ module ZuoraRestClient
           request[header_key] = header_value
         end
         http.request request do |response|
-          response.read_body do |chunk|
-            destination_io.write chunk
+          if response.kind_of? Net::HTTPSuccess
+            response.read_body do |chunk|
+              destination_io.write chunk
+            end
+          else
+            raise ConnectionError.new("Error: #{response.code} - #{response.message}")
           end
         end
       end
@@ -144,17 +151,21 @@ module ZuoraRestClient
     end
 
     def process_response(response)
-      if response.headers['Content-Type'].to_s.start_with?('application/json')
-        object = MultiJson.load(response.body)
-        if object.is_a? Array
-          object.map { |item| Result.new(item, recurse_over_arrays: true) }
+      if response.success?
+        if response.headers['Content-Type'].to_s.start_with?('application/json')
+          object = MultiJson.load(response.body)
+          if object.is_a? Array
+            object.map { |item| Result.new(item, recurse_over_arrays: true) }
+          else
+            Result.new(object, recurse_over_arrays: true)
+          end
+        elsif response.headers['Content-Type'].to_s.start_with?('text/xml')
+          Result.new(Nori.new.parse(response.body), recurse_over_arrays: true)
         else
-          Result.new(object, recurse_over_arrays: true)
+          response
         end
-      elsif response.headers['Content-Type'].to_s.start_with?('text/xml')
-        Result.new(Nori.new.parse(response.body), recurse_over_arrays: true)
       else
-        response
+        raise ConnectionError.new("Error: #{response.status} - #{response.reason_phrase}")
       end
     end
 
