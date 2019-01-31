@@ -19,7 +19,7 @@ $client = nil
 
 VCR.configure do |c|
   c.cassette_library_dir = 'fixtures/vcr_cassettes'
-  c.hook_into :webmock
+  c.hook_into :faraday
   c.filter_sensitive_data('{ZUORA_USERNAME}') { ENV['ZUORA_REST_CLIENT_RSPEC_USERNAME'] } if !ENV['ZUORA_REST_CLIENT_RSPEC_USERNAME'].nil?
   c.filter_sensitive_data('{ZUORA_PASSWORD}') { ENV['ZUORA_REST_CLIENT_RSPEC_PASSWORD'] } if !ENV['ZUORA_REST_CLIENT_RSPEC_PASSWORD'].nil?
   c.filter_sensitive_data('{ZUORA_SESSION_ID}') do |interaction|

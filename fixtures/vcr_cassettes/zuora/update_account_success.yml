@@ -2,24 +2,16 @@
 http_interactions:
 - request:
     method: put
-    uri: https://rest.zuora.com/v1/accounts/2c92a0fc636cad92016375070a0e3b22
+    uri: https://rest.zuora.com/v1/accounts/2c92a00768a2b3890168a5fa8dd84414
     body:
       encoding: UTF-8
       string: '{"batch":"Batch2"}'
     headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.8.3, ruby 2.4.1 (2017-03-22))
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip,deflate
-      Date:
-      - Fri, 18 May 2018 20:53:06 GMT
       Content-Type:
       - application/json
-      Apiaccesskeyid:
+      apiAccessKeyId:
       - "{ZUORA_USERNAME}"
-      Apisecretaccesskey:
+      apiSecretAccessKey:
       - "{ZUORA_PASSWORD}"
   response:
     status:
@@ -33,23 +25,23 @@ http_interactions:
         'unsafe-inline' 'unsafe-eval' 'self' https://api.tcell.io/; manifest-src 'none';
         style-src 'unsafe-inline' 'self'; font-src 'self'; child-src 'none'; frame-src
         'none'; connect-src 'self' https://api.tcell.io/ https://input.tcell.io/;
-        report-uri https://input.tcell.io/csp/e14f749ededb34ed6f61ee047073e7d5c02428ea31e0b1249ed5bdb2d99decec?tid=88c09fe3-c5cf-43ca-b135-133ede4800d4
+        report-uri https://input.tcell.io/csp/8abeff14fea5928cf9f25296fca62aa1a75fa57a6f06ad15ea451d64a579f75c?rid=1408685395
       Server:
       - Zuora App
-      Zuora-Request-Id:
-      - 2a168ab2-6970-4d9b-b7ab-26a7de5ac5c9
+      zuora-request-id:
+      - 9373a881-7dd1-4f5c-a474-87fe7a1d5c08
       X-Kong-Upstream-Latency:
-      - '70'
+      - '55'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Fri, 18 May 2018 20:53:06 GMT
+      - Thu, 31 Jan 2019 22:14:48 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Fri, 18 May 2018 20:53:06 GMT
+      - Thu, 31 Jan 2019 22:14:48 GMT
       Content-Length:
       - '22'
       Connection:
@@ -63,27 +55,19 @@ http_interactions:
           "success" : true
         }
     http_version: 
-  recorded_at: Fri, 18 May 2018 20:53:06 GMT
+  recorded_at: Thu, 31 Jan 2019 22:14:48 GMT
 - request:
     method: get
-    uri: https://rest.zuora.com/v1/accounts/2c92a0fc636cad92016375070a0e3b22
+    uri: https://rest.zuora.com/v1/accounts/2c92a00768a2b3890168a5fa8dd84414
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.8.3, ruby 2.4.1 (2017-03-22))
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip,deflate
-      Date:
-      - Fri, 18 May 2018 20:53:06 GMT
       Content-Type:
       - application/json
-      Apiaccesskeyid:
+      apiAccessKeyId:
       - "{ZUORA_USERNAME}"
-      Apisecretaccesskey:
+      apiSecretAccessKey:
       - "{ZUORA_PASSWORD}"
   response:
     status:
@@ -97,25 +81,25 @@ http_interactions:
         'unsafe-inline' 'unsafe-eval' 'self' https://api.tcell.io/; manifest-src 'none';
         style-src 'unsafe-inline' 'self'; font-src 'self'; child-src 'none'; frame-src
         'none'; connect-src 'self' https://api.tcell.io/ https://input.tcell.io/;
-        report-uri https://input.tcell.io/csp/e14f749ededb34ed6f61ee047073e7d5c02428ea31e0b1249ed5bdb2d99decec?tid=fcad505f-f11b-42a5-a3dc-7ba58cecf924
+        report-uri https://input.tcell.io/csp/8abeff14fea5928cf9f25296fca62aa1a75fa57a6f06ad15ea451d64a579f75c?rid=2063226540
       Server:
       - Zuora App
-      Zuora-Request-Id:
-      - e5e3f867-e66e-45cf-b061-1f6eae78ef00
+      zuora-request-id:
+      - ede1e491-0bd5-409b-b785-51d29813bf90
       X-Kong-Upstream-Latency:
-      - '67'
+      - '49'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Fri, 18 May 2018 20:53:06 GMT
+      - Thu, 31 Jan 2019 22:14:48 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Fri, 18 May 2018 20:53:06 GMT
+      - Thu, 31 Jan 2019 22:14:48 GMT
       Content-Length:
-      - '2376'
+      - '2442'
       Connection:
       - keep-alive
       Set-Cookie:
@@ -125,9 +109,9 @@ http_interactions:
       string: |-
         {
           "basicInfo" : {
-            "id" : "2c92a0fc636cad92016375070a0e3b22",
+            "id" : "2c92a00768a2b3890168a5fa8dd84414",
             "name" : "Test Account",
-            "accountNumber" : "Z00324103",
+            "accountNumber" : "Z00324159",
             "notes" : null,
             "status" : "Active",
             "crmId" : null,
@@ -190,7 +174,8 @@ http_interactions:
             "workEmail" : null,
             "workPhone" : null,
             "zipCode" : null,
-            "State2__c" : null
+            "State2__c" : null,
+            "contactDescription" : null
           },
           "soldToContact" : {
             "address1" : null,
@@ -212,11 +197,12 @@ http_interactions:
             "workEmail" : null,
             "workPhone" : null,
             "zipCode" : null,
-            "State2__c" : null
+            "State2__c" : null,
+            "contactDescription" : null
           },
           "taxInfo" : null,
           "success" : true
         }
     http_version: 
-  recorded_at: Fri, 18 May 2018 20:53:06 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Thu, 31 Jan 2019 22:14:48 GMT
+recorded_with: VCR 4.0.0

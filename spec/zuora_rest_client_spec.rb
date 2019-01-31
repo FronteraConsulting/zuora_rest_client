@@ -199,6 +199,7 @@ describe ZuoraRestClient do
       [$test_account_id_1, $test_account_id_2].each do |account_id|
         result = $client.delete_account_object(account_id)
         expect(result.success).to be_truthy
+        sleep 5
         deleted_account = $client.retrieve_account_object(account_id)
         expect(deleted_account.size).to eq(0)
       end

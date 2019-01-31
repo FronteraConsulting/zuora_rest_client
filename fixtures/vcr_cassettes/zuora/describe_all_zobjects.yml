@@ -4,22 +4,14 @@ http_interactions:
     method: get
     uri: https://rest.zuora.com/v1/describe/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.8.3, ruby 2.4.1 (2017-03-22))
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip,deflate
-      Date:
-      - Fri, 18 May 2018 20:53:05 GMT
       Content-Type:
       - application/json
-      Apiaccesskeyid:
+      apiAccessKeyId:
       - "{ZUORA_USERNAME}"
-      Apisecretaccesskey:
+      apiSecretAccessKey:
       - "{ZUORA_PASSWORD}"
   response:
     status:
@@ -33,15 +25,15 @@ http_interactions:
         'unsafe-inline' 'unsafe-eval' 'self' https://api.tcell.io/; manifest-src 'none';
         style-src 'unsafe-inline' 'self'; font-src 'self'; child-src 'none'; frame-src
         'none'; connect-src 'self' https://api.tcell.io/ https://input.tcell.io/;
-        report-uri https://input.tcell.io/csp/e14f749ededb34ed6f61ee047073e7d5c02428ea31e0b1249ed5bdb2d99decec?tid=0baf1fce-ce33-46ef-aa87-30727f392cb0
+        report-uri https://input.tcell.io/csp/8abeff14fea5928cf9f25296fca62aa1a75fa57a6f06ad15ea451d64a579f75c?rid=2063226540
       Content-Language:
       - en-US
       Server:
       - Zuora App
-      Zuora-Request-Id:
-      - a854565e-6cad-44cf-88ae-856cb1902f1c
+      zuora-request-id:
+      - 845c2a82-55e3-4725-9835-004d3fb8aeff
       X-Kong-Upstream-Latency:
-      - '46'
+      - '35'
       X-Kong-Proxy-Latency:
       - '0'
       Vary:
@@ -49,20 +41,19 @@ http_interactions:
       Content-Encoding:
       - gzip
       Expires:
-      - Fri, 18 May 2018 20:53:05 GMT
+      - Thu, 31 Jan 2019 22:14:47 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Fri, 18 May 2018 20:53:05 GMT
+      - Thu, 31 Jan 2019 22:14:47 GMT
       Content-Length:
-      - '1068'
+      - '1050'
       Connection:
       - keep-alive
       Set-Cookie:
-      - JSESSIONID={PROTECTED}; Path=/rest/; Secure; HttpOnly
-      - ZSession={ZUORA_SESSION_ID}; Path=/; Secure; HttpOnly
+      - JSESSIONID={PROTECTED}; Path=/rest; Secure; HttpOnly
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<objects>\r\n\t<object
@@ -84,10 +75,8 @@ http_interactions:
         \    <name>ContactSnapshot</name>\r\n     <label>Contact Snapshot</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
         href=\"https://api.zuora.com/rest/api/describe/CreditBalanceAdjustment\">\r\n
         \    <name>CreditBalanceAdjustment</name>\r\n     <label>Credit Balance Adjustment</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
-        href=\"https://api.zuora.com/rest/api/describe/Customer\">\r\n     <name>Customer</name>\r\n
-        \    <label>Customer</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/Export\">\r\n
-        \    <name>Export</name>\r\n     <label>Export</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object
-        href=\"https://api.zuora.com/rest/api/describe/PaymentGatewayReconciliationEventLog\">\r\n
+        href=\"https://api.zuora.com/rest/api/describe/Export\">\r\n     <name>Export</name>\r\n
+        \    <label>Export</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/PaymentGatewayReconciliationEventLog\">\r\n
         \    <name>PaymentGatewayReconciliationEventLog</name>\r\n     <label>Gateway
         Reconciliation Event</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/PaymentReconciliationJob\">\r\n
         \    <name>PaymentReconciliationJob</name>\r\n     <label>Gateway Reconciliation
@@ -178,5 +167,5 @@ http_interactions:
         \    <label>Updater Batch</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/Usage\">\r\n
         \    <name>Usage</name>\r\n     <label>Usage</label>\r\n</object>\r\n\r\n\r\n\r\n</objects>\r\n"
     http_version: 
-  recorded_at: Fri, 18 May 2018 20:53:05 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Thu, 31 Jan 2019 22:14:47 GMT
+recorded_with: VCR 4.0.0

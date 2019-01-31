@@ -2,24 +2,16 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://rest.zuora.com/v1/object/account/2c92a0fc636cad92016375070a0e3b22
+    uri: https://rest.zuora.com/v1/object/account/2c92a00768a2b3890168a5fa8dd84414
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.8.3, ruby 2.4.1 (2017-03-22))
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip,deflate
-      Date:
-      - Fri, 18 May 2018 20:53:07 GMT
       Content-Type:
       - application/json
-      Apiaccesskeyid:
+      apiAccessKeyId:
       - "{ZUORA_USERNAME}"
-      Apisecretaccesskey:
+      apiSecretAccessKey:
       - "{ZUORA_PASSWORD}"
   response:
     status:
@@ -30,51 +22,43 @@ http_interactions:
       - application/json; charset=utf-8
       Server:
       - kong/0.9.9
-      Zuora-Request-Id:
-      - dc3c27f5-783d-49cb-a87e-5aae6e6c64cf
+      zuora-request-id:
+      - a809db7a-3936-4189-9eef-4a7b9c6458d1
       X-Kong-Upstream-Latency:
-      - '319'
+      - '72'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Fri, 18 May 2018 20:53:08 GMT
+      - Thu, 31 Jan 2019 22:14:50 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Fri, 18 May 2018 20:53:08 GMT
+      - Thu, 31 Jan 2019 22:14:50 GMT
       Content-Length:
       - '57'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"id":"2c92a0fc636cad92016375070a0e3b22","success":true}
+      string: '{"id":"2c92a00768a2b3890168a5fa8dd84414","success":true}
 
 '
     http_version: 
-  recorded_at: Fri, 18 May 2018 20:53:08 GMT
+  recorded_at: Thu, 31 Jan 2019 22:14:50 GMT
 - request:
     method: get
-    uri: https://rest.zuora.com/v1/object/account/2c92a0fc636cad92016375070a0e3b22
+    uri: https://rest.zuora.com/v1/object/account/2c92a00768a2b3890168a5fa8dd84414
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.8.3, ruby 2.4.1 (2017-03-22))
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip,deflate
-      Date:
-      - Fri, 18 May 2018 20:53:08 GMT
       Content-Type:
       - application/json
-      Apiaccesskeyid:
+      apiAccessKeyId:
       - "{ZUORA_USERNAME}"
-      Apisecretaccesskey:
+      apiSecretAccessKey:
       - "{ZUORA_PASSWORD}"
   response:
     status:
@@ -85,20 +69,20 @@ http_interactions:
       - application/json; charset=utf-8
       Server:
       - kong/0.9.9
-      Zuora-Request-Id:
-      - 1776b8fc-8c58-4d97-b16d-677d3d9e6b52
+      zuora-request-id:
+      - a9527ff8-7778-452e-8cc4-9ef0e0871cf6
       X-Kong-Upstream-Latency:
-      - '41'
+      - '109'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Fri, 18 May 2018 20:53:08 GMT
+      - Thu, 31 Jan 2019 22:14:55 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Fri, 18 May 2018 20:53:08 GMT
+      - Thu, 31 Jan 2019 22:14:55 GMT
       Content-Length:
       - '36'
       Connection:
@@ -109,27 +93,19 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Fri, 18 May 2018 20:53:08 GMT
+  recorded_at: Thu, 31 Jan 2019 22:14:55 GMT
 - request:
     method: delete
-    uri: https://rest.zuora.com/v1/object/account/2c92a0fc636cad9f0163750710097ad5
+    uri: https://rest.zuora.com/v1/object/account/2c92a0ff68a2d89b0168a5fa940c7133
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.8.3, ruby 2.4.1 (2017-03-22))
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip,deflate
-      Date:
-      - Fri, 18 May 2018 20:53:08 GMT
       Content-Type:
       - application/json
-      Apiaccesskeyid:
+      apiAccessKeyId:
       - "{ZUORA_USERNAME}"
-      Apisecretaccesskey:
+      apiSecretAccessKey:
       - "{ZUORA_PASSWORD}"
   response:
     status:
@@ -140,51 +116,43 @@ http_interactions:
       - application/json; charset=utf-8
       Server:
       - kong/0.9.9
-      Zuora-Request-Id:
-      - fb873671-ebcf-458c-be5e-eebb2e1171bb
+      zuora-request-id:
+      - 28986cec-af7a-4332-a0bb-1212734cc731
       X-Kong-Upstream-Latency:
-      - '197'
+      - '112'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Fri, 18 May 2018 20:53:08 GMT
+      - Thu, 31 Jan 2019 22:14:56 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Fri, 18 May 2018 20:53:08 GMT
+      - Thu, 31 Jan 2019 22:14:56 GMT
       Content-Length:
       - '57'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"id":"2c92a0fc636cad9f0163750710097ad5","success":true}
+      string: '{"id":"2c92a0ff68a2d89b0168a5fa940c7133","success":true}
 
 '
     http_version: 
-  recorded_at: Fri, 18 May 2018 20:53:08 GMT
+  recorded_at: Thu, 31 Jan 2019 22:14:56 GMT
 - request:
     method: get
-    uri: https://rest.zuora.com/v1/object/account/2c92a0fc636cad9f0163750710097ad5
+    uri: https://rest.zuora.com/v1/object/account/2c92a0ff68a2d89b0168a5fa940c7133
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.8.3, ruby 2.4.1 (2017-03-22))
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip,deflate
-      Date:
-      - Fri, 18 May 2018 20:53:08 GMT
       Content-Type:
       - application/json
-      Apiaccesskeyid:
+      apiAccessKeyId:
       - "{ZUORA_USERNAME}"
-      Apisecretaccesskey:
+      apiSecretAccessKey:
       - "{ZUORA_PASSWORD}"
   response:
     status:
@@ -195,20 +163,20 @@ http_interactions:
       - application/json; charset=utf-8
       Server:
       - kong/0.9.9
-      Zuora-Request-Id:
-      - 5fe3eb93-67ba-4199-b918-310c438e2769
+      zuora-request-id:
+      - d40736dd-dd3f-4ffb-a579-978f216aae4f
       X-Kong-Upstream-Latency:
-      - '36'
+      - '39'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Fri, 18 May 2018 20:53:08 GMT
+      - Thu, 31 Jan 2019 22:15:01 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Fri, 18 May 2018 20:53:08 GMT
+      - Thu, 31 Jan 2019 22:15:01 GMT
       Content-Length:
       - '36'
       Connection:
@@ -219,5 +187,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Fri, 18 May 2018 20:53:08 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Thu, 31 Jan 2019 22:15:01 GMT
+recorded_with: VCR 4.0.0

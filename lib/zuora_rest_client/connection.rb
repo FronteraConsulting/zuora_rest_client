@@ -21,7 +21,9 @@ module ZuoraRestClient
         logger: Logger.new($stdout),
         log_level: :error,
         log: true,
-        api_proxy_port: nil }
+        api_proxy_port: nil,
+        request_timeout: 120,
+        request_open_timeout: 120 }
 
     def initialize(username, password, environment = :production, options = {})
       @username = username
@@ -126,7 +128,9 @@ module ZuoraRestClient
             app: 'https://apisandbox.zuora.com' } }
 
     def app_connection
-      Faraday.new(url: zuora_endpoint.app) do |faraday|
+      Faraday.new(url: zuora_endpoint.app, request: {
+          open_timeout: @options[:request_open_timeout] || 120,
+          timeout: @options[:request_timeout] || 120 }) do |faraday|
         faraday.use FaradayMiddleware::FollowRedirects
         faraday.use Faraday::Request::BasicAuthentication, @username, @password
         faraday.request :multipart
@@ -175,7 +179,9 @@ module ZuoraRestClient
         rest_endpoint_uri.path = '/'
         rest_endpoint_uri.port = @options[:api_proxy_port] || 443
       end
-      Faraday.new(url: rest_endpoint_uri.to_s) do |faraday|
+      Faraday.new(url: rest_endpoint_uri.to_s, request: {
+          open_timeout: @options[:request_open_timeout] || 120,
+          timeout: @options[:request_timeout] || 120 }) do |faraday|
         faraday.use FaradayMiddleware::FollowRedirects
         faraday.request :multipart
         faraday.response :detailed_logger, logger

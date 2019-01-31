@@ -4,22 +4,14 @@ http_interactions:
     method: get
     uri: https://rest.zuora.com/v1/describe/Account
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
-      User-Agent:
-      - HTTPClient/1.0 (2.8.3, ruby 2.4.1 (2017-03-22))
-      Accept:
-      - "*/*"
-      Accept-Encoding:
-      - gzip,deflate
-      Date:
-      - Fri, 18 May 2018 20:53:02 GMT
       Content-Type:
       - application/json
-      Apiaccesskeyid:
+      apiAccessKeyId:
       - "{ZUORA_USERNAME}"
-      Apisecretaccesskey:
+      apiSecretAccessKey:
       - "{ZUORA_PASSWORD}"
   response:
     status:
@@ -33,15 +25,15 @@ http_interactions:
         'unsafe-inline' 'unsafe-eval' 'self' https://api.tcell.io/; manifest-src 'none';
         style-src 'unsafe-inline' 'self'; font-src 'self'; child-src 'none'; frame-src
         'none'; connect-src 'self' https://api.tcell.io/ https://input.tcell.io/;
-        report-uri https://input.tcell.io/csp/e14f749ededb34ed6f61ee047073e7d5c02428ea31e0b1249ed5bdb2d99decec?tid=ea6b0117-5a78-41d5-bcc6-8c62de37fcd2
+        report-uri https://input.tcell.io/csp/8abeff14fea5928cf9f25296fca62aa1a75fa57a6f06ad15ea451d64a579f75c?rid=2063226540
       Content-Language:
       - en-US
       Server:
       - Zuora App
-      Zuora-Request-Id:
-      - 2c12223b-4314-459f-8d07-de1f4dead6b8
+      zuora-request-id:
+      - a2e366f3-aed1-4bbb-962c-0909a2fd73dd
       X-Kong-Upstream-Latency:
-      - '82'
+      - '54'
       X-Kong-Proxy-Latency:
       - '0'
       Vary:
@@ -49,20 +41,19 @@ http_interactions:
       Content-Encoding:
       - gzip
       Expires:
-      - Fri, 18 May 2018 20:53:03 GMT
+      - Thu, 31 Jan 2019 22:14:43 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Fri, 18 May 2018 20:53:03 GMT
+      - Thu, 31 Jan 2019 22:14:43 GMT
       Content-Length:
-      - '2722'
+      - '2724'
       Connection:
       - keep-alive
       Set-Cookie:
-      - JSESSIONID={PROTECTED}; Path=/rest/; Secure; HttpOnly
-      - ZSession={ZUORA_SESSION_ID}; Path=/; Secure; HttpOnly
+      - JSESSIONID={PROTECTED}; Path=/rest; Secure; HttpOnly
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<object href=\"https://api.zuora.com/rest/api/describe/Account\">\r\n
@@ -277,41 +268,42 @@ http_interactions:
         \           <option>WST</option>\r\n            <option>XAF</option>\r\n            <option>XCD</option>\r\n
         \           <option>XOF</option>\r\n            <option>AOA</option>\r\n            <option>XPF</option>\r\n
         \           <option>YER</option>\r\n            <option>ZMK</option>\r\n            <option>ZWD</option>\r\n
-        \           <option>HNL</option>\r\n            <option>ARS</option>\r\n            <option>AWG</option>\r\n
-        \           <option>EUR</option>\r\n            <option>AZN</option>\r\n            <option>BAM</option>\r\n
-        \           <option>BBD</option>\r\n            <option>BDT</option>\r\n            <option>BGN</option>\r\n
-        \           <option>BHD</option>\r\n            <option>BIF</option>\r\n            <option>BMD</option>\r\n
-        \           <option>BND</option>\r\n            <option>BOB</option>\r\n            <option>GBP</option>\r\n
-        \           <option>BRL</option>\r\n            <option>BSD</option>\r\n            <option>BTN</option>\r\n
-        \           <option>BWP</option>\r\n            <option>BYR</option>\r\n            <option>BZD</option>\r\n
-        \           <option>CDF</option>\r\n            <option>CLP</option>\r\n            <option>COP</option>\r\n
-        \           <option>CRC</option>\r\n            <option>JPY</option>\r\n            <option>CUP</option>\r\n
-        \           <option>CVE</option>\r\n            <option>CZK</option>\r\n            <option>DJF</option>\r\n
-        \           <option>DKK</option>\r\n            <option>DOP</option>\r\n            <option>DZD</option>\r\n
-        \           <option>EEK</option>\r\n            <option>EGP</option>\r\n            <option>CNY</option>\r\n
-        \           <option>ERN</option>\r\n            <option>ETB</option>\r\n            <option>FJD</option>\r\n
-        \           <option>FKP</option>\r\n            <option>GEL</option>\r\n            <option>GHS</option>\r\n
-        \           <option>GIP</option>\r\n            <option>GMD</option>\r\n            <option>GNF</option>\r\n
-        \           <option>CAD</option>\r\n            <option>GTQ</option>\r\n            <option>GYD</option>\r\n
-        \           <option>HRK</option>\r\n            <option>HTG</option>\r\n            <option>HUF</option>\r\n
-        \           <option>IDR</option>\r\n            <option>ILS</option>\r\n            <option>INR</option>\r\n
-        \           <option>IQD</option>\r\n            <option>AUD</option>\r\n            <option>IRR</option>\r\n
-        \           <option>ISK</option>\r\n            <option>JMD</option>\r\n            <option>JOD</option>\r\n
-        \           <option>KES</option>\r\n            <option>KGS</option>\r\n            <option>KHR</option>\r\n
-        \           <option>KMF</option>\r\n            <option>KPW</option>\r\n            <option>CHF</option>\r\n
-        \           <option>KRW</option>\r\n            <option>KWD</option>\r\n            <option>KYD</option>\r\n
-        \           <option>KZT</option>\r\n            <option>LAK</option>\r\n            <option>LBP</option>\r\n
-        \           <option>LKR</option>\r\n            <option>LRD</option>\r\n            <option>LSL</option>\r\n
-        \           <option>LTL</option>\r\n            <option>RUB</option>\r\n            <option>LVL</option>\r\n
-        \           <option>LYD</option>\r\n            <option>MAD</option>\r\n            <option>MDL</option>\r\n
-        \           <option>MGA</option>\r\n            <option>MKD</option>\r\n            <option>MMK</option>\r\n
-        \           <option>MNT</option>\r\n            <option>MOP</option>\r\n            <option>MRO</option>\r\n
-        \        </options>\r\n         <contexts>\r\n            <context>soap</context>\r\n
-        \           <context>export</context>\r\n         </contexts>\r\n      </field>\r\n
-        \     <field>\r\n         <name>CustomerServiceRepName</name>\r\n         <label>CSR</label>\r\n
-        \        <selectable>true</selectable>\r\n         <createable>true</createable>\r\n
-        \        <updateable>true</updateable>\r\n         <filterable>true</filterable>\r\n
-        \        <custom>false</custom>\r\n         <maxlength></maxlength>\r\n         <required>false</required>\r\n
+        \           <option>HNL</option>\r\n            <option>VES</option>\r\n            <option>ARS</option>\r\n
+        \           <option>AWG</option>\r\n            <option>EUR</option>\r\n            <option>AZN</option>\r\n
+        \           <option>BAM</option>\r\n            <option>BBD</option>\r\n            <option>BDT</option>\r\n
+        \           <option>BGN</option>\r\n            <option>BHD</option>\r\n            <option>BIF</option>\r\n
+        \           <option>BMD</option>\r\n            <option>BND</option>\r\n            <option>BOB</option>\r\n
+        \           <option>GBP</option>\r\n            <option>BRL</option>\r\n            <option>BSD</option>\r\n
+        \           <option>BTN</option>\r\n            <option>BWP</option>\r\n            <option>BYR</option>\r\n
+        \           <option>BZD</option>\r\n            <option>CDF</option>\r\n            <option>CLP</option>\r\n
+        \           <option>COP</option>\r\n            <option>CRC</option>\r\n            <option>JPY</option>\r\n
+        \           <option>CUP</option>\r\n            <option>CVE</option>\r\n            <option>CZK</option>\r\n
+        \           <option>DJF</option>\r\n            <option>DKK</option>\r\n            <option>DOP</option>\r\n
+        \           <option>DZD</option>\r\n            <option>EEK</option>\r\n            <option>EGP</option>\r\n
+        \           <option>CNY</option>\r\n            <option>ERN</option>\r\n            <option>ETB</option>\r\n
+        \           <option>FJD</option>\r\n            <option>FKP</option>\r\n            <option>GEL</option>\r\n
+        \           <option>GHS</option>\r\n            <option>GIP</option>\r\n            <option>GMD</option>\r\n
+        \           <option>GNF</option>\r\n            <option>CAD</option>\r\n            <option>GTQ</option>\r\n
+        \           <option>GYD</option>\r\n            <option>HRK</option>\r\n            <option>HTG</option>\r\n
+        \           <option>HUF</option>\r\n            <option>IDR</option>\r\n            <option>ILS</option>\r\n
+        \           <option>INR</option>\r\n            <option>IQD</option>\r\n            <option>AUD</option>\r\n
+        \           <option>IRR</option>\r\n            <option>ISK</option>\r\n            <option>JMD</option>\r\n
+        \           <option>JOD</option>\r\n            <option>KES</option>\r\n            <option>KGS</option>\r\n
+        \           <option>KHR</option>\r\n            <option>KMF</option>\r\n            <option>KPW</option>\r\n
+        \           <option>CHF</option>\r\n            <option>KRW</option>\r\n            <option>KWD</option>\r\n
+        \           <option>KYD</option>\r\n            <option>KZT</option>\r\n            <option>LAK</option>\r\n
+        \           <option>LBP</option>\r\n            <option>LKR</option>\r\n            <option>LRD</option>\r\n
+        \           <option>LSL</option>\r\n            <option>LTL</option>\r\n            <option>RUB</option>\r\n
+        \           <option>LVL</option>\r\n            <option>LYD</option>\r\n            <option>MAD</option>\r\n
+        \           <option>MDL</option>\r\n            <option>MGA</option>\r\n            <option>MKD</option>\r\n
+        \           <option>MMK</option>\r\n            <option>MNT</option>\r\n            <option>MOP</option>\r\n
+        \           <option>MRO</option>\r\n         </options>\r\n         <contexts>\r\n
+        \           <context>soap</context>\r\n            <context>export</context>\r\n
+        \        </contexts>\r\n      </field>\r\n      <field>\r\n         <name>CustomerServiceRepName</name>\r\n
+        \        <label>CSR</label>\r\n         <selectable>true</selectable>\r\n
+        \        <createable>true</createable>\r\n         <updateable>true</updateable>\r\n
+        \        <filterable>true</filterable>\r\n         <custom>false</custom>\r\n
+        \        <maxlength></maxlength>\r\n         <required>false</required>\r\n
         \        <type>text</type>\r\n         <contexts>\r\n            <context>soap</context>\r\n
         \           <context>export</context>\r\n         </contexts>\r\n      </field>\r\n
         \     <field>\r\n         <name>DefaultPaymentMethodId</name>\r\n         <label>Default
@@ -592,5 +584,5 @@ http_interactions:
         \        <name>SoldToContact</name>\r\n         <label>Sold To</label>    \r\n
         \     </object>\r\n   </related-objects>\r\n</object>\r\n\r\n"
     http_version: 
-  recorded_at: Fri, 18 May 2018 20:53:03 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Thu, 31 Jan 2019 22:14:44 GMT
+recorded_with: VCR 4.0.0
