@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rest.zuora.com/v1/accounts/2c92a00768a2b3890168a5fa8dd84414
+    uri: https://rest.zuora.com/v1/accounts/2c92a008690a61a0016910ecddc619d3
     body:
       encoding: US-ASCII
       string: ''
@@ -29,21 +29,21 @@ http_interactions:
       Server:
       - Zuora App
       zuora-request-id:
-      - 9a84d7e5-7add-406e-b39f-adc29c50c701
+      - 6cbd3445-5813-44f6-b2a0-34af2b35233f
       X-Kong-Upstream-Latency:
-      - '55'
+      - '56'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Thu, 31 Jan 2019 22:14:47 GMT
+      - Thu, 21 Feb 2019 16:39:12 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Thu, 31 Jan 2019 22:14:47 GMT
+      - Thu, 21 Feb 2019 16:39:12 GMT
       Content-Length:
-      - '2442'
+      - '2445'
       Connection:
       - keep-alive
       Set-Cookie:
@@ -53,9 +53,9 @@ http_interactions:
       string: |-
         {
           "basicInfo" : {
-            "id" : "2c92a00768a2b3890168a5fa8dd84414",
+            "id" : "2c92a008690a61a0016910ecddc619d3",
             "name" : "Test Account",
-            "accountNumber" : "Z00324159",
+            "accountNumber" : "Z00324163",
             "notes" : null,
             "status" : "Active",
             "crmId" : null,
@@ -74,7 +74,7 @@ http_interactions:
             "ProfileGroup__c" : null,
             "LatestDunningEmailSubject__c" : null,
             "TestAccountField__c" : null,
-            "SuppressDunning__c" : null,
+            "SuppressDunning__c" : "false",
             "ACHVerificationCode__c" : null,
             "CCemail__c" : null,
             "publisher__c" : null,
@@ -148,5 +148,5 @@ http_interactions:
           "success" : true
         }
     http_version: 
-  recorded_at: Thu, 31 Jan 2019 22:14:47 GMT
+  recorded_at: Thu, 21 Feb 2019 16:39:12 GMT
 recorded_with: VCR 4.0.0

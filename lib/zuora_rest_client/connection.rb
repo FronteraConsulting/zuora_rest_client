@@ -52,7 +52,7 @@ module ZuoraRestClient
 
     def rest_get(path, zuora_version = nil)
       response = rest_connection(use_api_proxy?(path)).get do |request|
-        request.url [ ZUORA_REST_MAJOR_VERSION, path ].join('/')
+        request.url [ ZUORA_REST_MAJOR_VERSION, path ].join('')
         request.headers = rest_headers(zuora_version)
       end
       process_response(response)
@@ -66,7 +66,7 @@ module ZuoraRestClient
       endpoint_uri = Addressable::URI.parse(zuora_endpoint.rest)
       Net::HTTP.start(endpoint_uri.normalized_host, endpoint_uri.normalized_port,
           use_ssl: endpoint_uri.normalized_scheme == 'https') do |http|
-        request = Net::HTTP::Get.new [ endpoint_uri.normalized_path, ZUORA_REST_MAJOR_VERSION, path ].join('/')
+        request = Net::HTTP::Get.new [ endpoint_uri.normalized_path, ZUORA_REST_MAJOR_VERSION, path ].join('')
         rest_headers(zuora_version).each_pair do |header_key, header_value|
           request[header_key] = header_value
         end
@@ -89,7 +89,7 @@ module ZuoraRestClient
 
     def rest_post(path, post_data = nil, zuora_version = nil, is_json = true)
       response = rest_connection(use_api_proxy?(path)).post do |request|
-        request.url [ ZUORA_REST_MAJOR_VERSION, path ].join('/')
+        request.url [ ZUORA_REST_MAJOR_VERSION, path ].join('')
         request.headers = rest_headers(zuora_version)
         request.body = MultiJson.dump(post_data) if !post_data.nil? && is_json
         request.body = post_data if !post_data.nil? && !is_json
@@ -99,7 +99,7 @@ module ZuoraRestClient
 
     def rest_put(path, put_data = nil, zuora_version = nil, is_json = true)
       response = rest_connection(use_api_proxy?(path)).put do |request|
-        request.url [ ZUORA_REST_MAJOR_VERSION, path ].join('/')
+        request.url [ ZUORA_REST_MAJOR_VERSION, path ].join('')
         request.headers = rest_headers(zuora_version)
         request.body = MultiJson.dump(put_data) if !put_data.nil? && is_json
         request.body = put_data if !put_data.nil? && !is_json
@@ -109,7 +109,7 @@ module ZuoraRestClient
 
     def rest_delete(path, zuora_version = nil)
       response = rest_connection(use_api_proxy?(path)).delete do |request|
-        request.url [ ZUORA_REST_MAJOR_VERSION, path ].join('/')
+        request.url [ ZUORA_REST_MAJOR_VERSION, path ].join('')
         request.headers = rest_headers(zuora_version)
       end
       process_response(response)

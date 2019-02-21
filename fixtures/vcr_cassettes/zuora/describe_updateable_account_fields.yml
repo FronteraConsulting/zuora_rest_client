@@ -31,7 +31,7 @@ http_interactions:
       Server:
       - Zuora App
       zuora-request-id:
-      - 84d15990-ccc2-4dbd-933d-d5e476f26fde
+      - ffc5d01e-98d9-4c76-a201-00c0c37e546d
       X-Kong-Upstream-Latency:
       - '63'
       X-Kong-Proxy-Latency:
@@ -41,13 +41,13 @@ http_interactions:
       Content-Encoding:
       - gzip
       Expires:
-      - Thu, 31 Jan 2019 22:14:45 GMT
+      - Thu, 21 Feb 2019 16:39:11 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Thu, 31 Jan 2019 22:14:45 GMT
+      - Thu, 21 Feb 2019 16:39:11 GMT
       Content-Length:
       - '2724'
       Connection:
@@ -584,5 +584,5 @@ http_interactions:
         \        <name>SoldToContact</name>\r\n         <label>Sold To</label>    \r\n
         \     </object>\r\n   </related-objects>\r\n</object>\r\n\r\n"
     http_version: 
-  recorded_at: Thu, 31 Jan 2019 22:14:45 GMT
+  recorded_at: Thu, 21 Feb 2019 16:39:11 GMT
 recorded_with: VCR 4.0.0

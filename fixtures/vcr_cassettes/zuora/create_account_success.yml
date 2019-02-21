@@ -31,21 +31,21 @@ http_interactions:
       Server:
       - Zuora App
       zuora-request-id:
-      - 57593793-3724-4c43-97fe-2d8a52d27a8d
+      - 89edc3be-03ed-4fd5-afe7-baf9b43d0bd9
       X-Kong-Upstream-Latency:
-      - '111'
+      - '265'
       X-Kong-Proxy-Latency:
       - '0'
       Expires:
-      - Thu, 31 Jan 2019 22:14:47 GMT
+      - Thu, 21 Feb 2019 16:39:12 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Thu, 31 Jan 2019 22:14:47 GMT
+      - Thu, 21 Feb 2019 16:39:12 GMT
       Content-Length:
-      - '165'
+      - '281'
       Connection:
       - keep-alive
       Set-Cookie:
@@ -55,10 +55,12 @@ http_interactions:
       string: |-
         {
           "success" : true,
-          "accountId" : "2c92a00768a2b3890168a5fa8dd84414",
-          "accountNumber" : "Z00324159",
-          "paymentMethodId" : "2c92a00768a2b3890168a5fa8de6441a"
+          "accountId" : "2c92a008690a61a0016910ecddc619d3",
+          "accountNumber" : "Z00324163",
+          "billToContactId" : "2c92a008690a61a0016910ecdde419d4",
+          "soldToContactId" : "2c92a008690a61a0016910ecddef19d6",
+          "paymentMethodId" : "2c92a008690a61a0016910ecde1719d9"
         }
     http_version: 
-  recorded_at: Thu, 31 Jan 2019 22:14:47 GMT
+  recorded_at: Thu, 21 Feb 2019 16:39:12 GMT
 recorded_with: VCR 4.0.0

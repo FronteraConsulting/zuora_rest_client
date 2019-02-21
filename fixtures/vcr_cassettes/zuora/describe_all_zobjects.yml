@@ -31,9 +31,9 @@ http_interactions:
       Server:
       - Zuora App
       zuora-request-id:
-      - 845c2a82-55e3-4725-9835-004d3fb8aeff
+      - 4e900e07-4315-4878-a6cf-b918bf034a5d
       X-Kong-Upstream-Latency:
-      - '35'
+      - '32'
       X-Kong-Proxy-Latency:
       - '0'
       Vary:
@@ -41,13 +41,13 @@ http_interactions:
       Content-Encoding:
       - gzip
       Expires:
-      - Thu, 31 Jan 2019 22:14:47 GMT
+      - Thu, 21 Feb 2019 16:39:12 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Thu, 31 Jan 2019 22:14:47 GMT
+      - Thu, 21 Feb 2019 16:39:12 GMT
       Content-Length:
       - '1050'
       Connection:
@@ -167,5 +167,5 @@ http_interactions:
         \    <label>Updater Batch</label>\r\n</object>\r\n\r\n\r\n\r\n\t<object href=\"https://api.zuora.com/rest/api/describe/Usage\">\r\n
         \    <name>Usage</name>\r\n     <label>Usage</label>\r\n</object>\r\n\r\n\r\n\r\n</objects>\r\n"
     http_version: 
-  recorded_at: Thu, 31 Jan 2019 22:14:47 GMT
+  recorded_at: Thu, 21 Feb 2019 16:39:12 GMT
 recorded_with: VCR 4.0.0
