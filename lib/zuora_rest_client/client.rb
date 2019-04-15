@@ -4,6 +4,10 @@ require 'fire_poll'
 require 'base64'
 require 'date'
 
+require 'active_support'
+require 'active_support/core_ext/object/try'
+require 'active_support/core_ext/string/inflections'
+
 module ZuoraRestClient
 
   class Client
