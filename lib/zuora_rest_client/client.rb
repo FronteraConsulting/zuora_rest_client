@@ -1362,8 +1362,10 @@ module ZuoraRestClient
     #                                                                            #
     ##############################################################################
 
-    def get_product_rate_plans(product_id, zuora_version = nil)
-      @connection.rest_get("/rateplan/#{product_id}/productRatePlan", zuora_version)
+    def get_product_rate_plans(product_id, query_params = {}, zuora_version = nil)
+      uri = Addressable::URI.parse("/rateplan/#{product_id}/productRatePlan")
+      uri.query_values = query_params
+      @connection.rest_get(uri.to_s, zuora_version)
     end
 
     def create_product_rate_plan_object(request, zuora_version = nil)
@@ -1440,7 +1442,7 @@ module ZuoraRestClient
     #                                                                            #
     ##############################################################################
 
-    def retrieve_rate_plan_charge_object(rate_plan_chargeid, fields = nil, zuora_version = nil)
+    def retrieve_rate_plan_charge_object(rate_plan_charge_id, fields = nil, zuora_version = nil)
       uri = Addressable::URI.parse("/object/rate-plan-charge/#{rate_plan_charge_id}")
       uri.query_values = { fields: fields.to_s } if !fields.nil?
       @connection.rest_get(uri.to_s, zuora_version)
