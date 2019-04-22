@@ -1362,6 +1362,10 @@ module ZuoraRestClient
     #                                                                            #
     ##############################################################################
 
+    def get_product_rate_plans(product_id, zuora_version = nil)
+      @connection.rest_get("/rateplan/#{product_id}/productRatePlan", zuora_version)
+    end
+
     def create_product_rate_plan_object(request, zuora_version = nil)
       @connection.rest_post('/object/product-rate-plan', request, zuora_version)
     end
