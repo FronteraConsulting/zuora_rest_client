@@ -351,7 +351,7 @@ module ZuoraRestClient
     end
 
     def get_product(product_id, zuora_version = nil)
-      @connection.rest_get("/catalog/products/#{product_id}", zuora_version)
+      @connection.rest_get("/catalog/product/#{product_id}", zuora_version)
     end
 
     def share_product_with_entities(product_id, request, zuora_version = nil)
