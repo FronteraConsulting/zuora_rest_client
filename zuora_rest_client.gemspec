@@ -38,8 +38,8 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'fire_poll', '~> 1.2'
   spec.add_runtime_dependency 'multi_json', '~> 1.12', '>= 1.12.1'
   spec.add_runtime_dependency 'nori', '~> 2.6'
-  spec.add_runtime_dependency 'nokogiri', '~> 1.8'
-  spec.add_runtime_dependency 'recursive-open-struct', '~> 1.0', '>= 1.0.4'
+  spec.add_runtime_dependency 'nokogiri', '~> 1'
+  spec.add_runtime_dependency 'recursive-open-struct', '~> 1', '>= 1.0.4'
   spec.add_runtime_dependency 'activesupport', '>= 0'
 
 end
