@@ -1,6 +1,5 @@
 require 'zuora_rest_client/result'
 require 'faraday'
-require 'faraday_middleware'
 require 'faraday/detailed_logger'
 require 'multi_json'
 require 'ostruct'
@@ -182,7 +181,6 @@ module ZuoraRestClient
       Faraday.new(url: rest_endpoint_uri.to_s, request: {
           open_timeout: @options[:request_open_timeout] || 120,
           timeout: @options[:request_timeout] || 120 }) do |faraday|
-        faraday.use FaradayMiddleware::FollowRedirects
         faraday.request :multipart
         faraday.response :detailed_logger, logger
         faraday.adapter :httpclient

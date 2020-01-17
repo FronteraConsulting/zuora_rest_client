@@ -52,3 +52,4 @@ Gemfile.lock
 .idea
 /.env
 .env
+/fixtures/vcr_cassettes/
