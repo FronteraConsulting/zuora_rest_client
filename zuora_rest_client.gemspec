@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rake', '~> 13'
   spec.add_development_dependency 'rspec', '~> 3.6'
   spec.add_development_dependency 'dotenv', '~> 2.2', '>= 2.2.1'
   spec.add_development_dependency 'simplecov', '~> 0.14.1'
@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'httpclient', '~> 2'
   spec.add_runtime_dependency 'faraday', '>= 0', '< 2'
+  spec.add_runtime_dependency 'faraday_middleware', '>= 0', '< 2'
   spec.add_runtime_dependency 'faraday-detailed_logger', '~> 2'
   spec.add_runtime_dependency 'multipart-post', '~> 2'
   spec.add_runtime_dependency 'addressable', '~> 2', '>= 2.5.1'

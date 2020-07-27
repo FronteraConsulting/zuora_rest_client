@@ -1,5 +1,6 @@
 require 'zuora_rest_client/result'
 require 'faraday'
+require 'faraday_middleware'
 require 'faraday/detailed_logger'
 require 'multi_json'
 require 'ostruct'
