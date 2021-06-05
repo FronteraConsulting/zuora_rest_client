@@ -119,6 +119,24 @@ module ZuoraRestClient
       process_response(response)
     end
 
+    def zuora_endpoint
+      if @environment.is_a? Symbol
+        if @environment.to_s.start_with?('services')
+          rest_endpoint = "https://#{@environment.to_s}.zuora.com/apps"
+          app_endpoint = "https://#{@environment.to_s}.zuora.com/apps/api"
+        else
+          rest_endpoint = "#{ZUORA_ENVIRONMENTS[@environment][:rest]}"
+          app_endpoint = "#{ZUORA_ENVIRONMENTS[@environment][:app]}/apps/api"
+        end
+      elsif @environment.is_a? Hash
+        rest_endpoint = "#{@environment[:rest]}"
+        app_endpoint = "#{@environment[:app]}/apps/api"
+      else
+        raise 'Possible values for environment are: :production, :api_sandbox, :test, :servicesNNN or a hash with base URL values for :rest and :app.'
+      end
+      OpenStruct.new({ rest: rest_endpoint, app: app_endpoint })
+    end
+    
     private
 
     ZUORA_REST_MAJOR_VERSION = 'v1'
@@ -211,24 +229,6 @@ module ZuoraRestClient
     def use_api_proxy?(path)
       @environment.to_s.start_with?('services') &&
           (path.start_with?('/action/') || path.start_with?('/object/'))
-    end
-
-    def zuora_endpoint
-      if @environment.is_a? Symbol
-        if @environment.to_s.start_with?('services')
-          rest_endpoint = "https://#{@environment.to_s}.zuora.com/apps"
-          app_endpoint = "https://#{@environment.to_s}.zuora.com/apps/api"
-        else
-          rest_endpoint = "#{ZUORA_ENVIRONMENTS[@environment][:rest]}"
-          app_endpoint = "#{ZUORA_ENVIRONMENTS[@environment][:app]}/apps/api"
-        end
-      elsif @environment.is_a? Hash
-        rest_endpoint = "#{@environment[:rest]}"
-        app_endpoint = "#{@environment[:app]}/apps/api"
-      else
-        raise 'Possible values for environment are: :production, :api_sandbox, :test, :servicesNNN or a hash with base URL values for :rest and :app.'
-      end
-      OpenStruct.new({ rest: rest_endpoint, app: app_endpoint })
     end
 
   end

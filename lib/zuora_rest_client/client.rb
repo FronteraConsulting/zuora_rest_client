@@ -12,6 +12,8 @@ module ZuoraRestClient
 
   class Client
 
+    attr_reader :connection
+
     DEFAULT_CLIENT_OPTIONS = {
         logger: Logger.new($stdout),
         log_level: :error,
