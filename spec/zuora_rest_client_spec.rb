@@ -28,9 +28,9 @@ describe ZuoraRestClient do
     VCR.use_cassette('zuora/describe_all_account_fields') do |cassette|
       verify_env_is_set if cassette.originally_recorded_at.nil?
       describe_field_results = $client.describe_fields('Account')
-      expect(describe_field_results.find { |item| item.name == 'Id'}).not_to be_nil
-      expect(describe_field_results.find { |item| item.name == 'CrmId'}).not_to be_nil
-      expect(describe_field_results.find { |item| item.name == 'Balance'}).not_to be_nil
+      expect(describe_field_results.find { |item| item.name == 'Id' }).not_to be_nil
+      expect(describe_field_results.find { |item| item.name == 'CrmId' }).not_to be_nil
+      expect(describe_field_results.find { |item| item.name == 'Balance' }).not_to be_nil
     end
   end
 
@@ -38,9 +38,9 @@ describe ZuoraRestClient do
     VCR.use_cassette('zuora/describe_updateable_account_fields') do |cassette|
       verify_env_is_set if cassette.originally_recorded_at.nil?
       describe_field_results = $client.describe_fields('Account', { updateable: true })
-      expect(describe_field_results.find { |item| item.name == 'Id'}).not_to be_nil
-      expect(describe_field_results.find { |item| item.name == 'CrmId'}).not_to be_nil
-      expect(describe_field_results.find { |item| item.name == 'Balance'}).to be_nil
+      expect(describe_field_results.find { |item| item.name == 'Id' }).not_to be_nil
+      expect(describe_field_results.find { |item| item.name == 'CrmId' }).not_to be_nil
+      expect(describe_field_results.find { |item| item.name == 'Balance' }).to be_nil
     end
   end
 
@@ -48,9 +48,9 @@ describe ZuoraRestClient do
     VCR.use_cassette('zuora/describe_non_updateable_account_fields') do |cassette|
       verify_env_is_set if cassette.originally_recorded_at.nil?
       describe_field_results = $client.describe_fields('Account', { updateable: false })
-      expect(describe_field_results.find { |item| item.name == 'Id'}).to be_nil
-      expect(describe_field_results.find { |item| item.name == 'CrmId'}).to be_nil
-      expect(describe_field_results.find { |item| item.name == 'Balance'}).not_to be_nil
+      expect(describe_field_results.find { |item| item.name == 'Id' }).to be_nil
+      expect(describe_field_results.find { |item| item.name == 'CrmId' }).to be_nil
+      expect(describe_field_results.find { |item| item.name == 'Balance' }).not_to be_nil
     end
   end
 
@@ -58,9 +58,9 @@ describe ZuoraRestClient do
     VCR.use_cassette('zuora/describe_exportable_account_fields') do |cassette|
       verify_env_is_set if cassette.originally_recorded_at.nil?
       describe_field_results = $client.describe_fields('Account', { exportable: true })
-      expect(describe_field_results.find { |item| item.name == 'Id'}).not_to be_nil
-      expect(describe_field_results.find { |item| item.name == 'CrmId'}).not_to be_nil
-      expect(describe_field_results.find { |item| item.name == 'DefaultPaymentMethodId'}).to be_nil
+      expect(describe_field_results.find { |item| item.name == 'Id' }).not_to be_nil
+      expect(describe_field_results.find { |item| item.name == 'CrmId' }).not_to be_nil
+      expect(describe_field_results.find { |item| item.name == 'BillToId' }).to be_nil
     end
   end
 
@@ -68,9 +68,9 @@ describe ZuoraRestClient do
     VCR.use_cassette('zuora/describe_non_exportable_account_fields') do |cassette|
       verify_env_is_set if cassette.originally_recorded_at.nil?
       describe_field_results = $client.describe_fields('Account', { exportable: false })
-      expect(describe_field_results.find { |item| item.name == 'Id'}).to be_nil
-      expect(describe_field_results.find { |item| item.name == 'CrmId'}).to be_nil
-      expect(describe_field_results.find { |item| item.name == 'DefaultPaymentMethodId'}).not_to be_nil
+      expect(describe_field_results.find { |item| item.name == 'Id' }).to be_nil
+      expect(describe_field_results.find { |item| item.name == 'CrmId' }).to be_nil
+      expect(describe_field_results.find { |item| item.name == 'BillToId' }).not_to be_nil
     end
   end
 
@@ -78,13 +78,13 @@ describe ZuoraRestClient do
     VCR.use_cassette('zuora/describe_account_related_objects') do |cassette|
       verify_env_is_set if cassette.originally_recorded_at.nil?
       describe_related_objects_results = $client.describe_related_objects('Account')
-      expect(describe_related_objects_results.find { |item| item.name == 'BillToContact'}.label).to eq('Bill To')
-      expect(describe_related_objects_results.find { |item| item.name == 'SoldToContact'}.label).to eq('Sold To')
+      expect(describe_related_objects_results.find { |item| item.name == 'BillToContact' }.label).to eq('Bill To')
+      expect(describe_related_objects_results.find { |item| item.name == 'SoldToContact' }.label).to eq('Sold To')
     end
   end
 
   it 'describes all ZObjects' do
-    VCR.use_cassette('zuora/describe_all_zobjects', match_requests_on: [ :host, :path ]) do |cassette|
+    VCR.use_cassette('zuora/describe_all_zobjects', match_requests_on: [:host, :path]) do |cassette|
       verify_env_is_set if cassette.originally_recorded_at.nil?
       describe_result = $client.describe_object
       expect(describe_result.find { |item| item['name'] == 'Account' }.label).to eq('Account')
@@ -141,6 +141,21 @@ describe ZuoraRestClient do
       result = $client.get_account_summary($test_account_id_1)
       expect(result.basicInfo.id).to eq($test_account_id_1)
       expect(result.basicInfo.name).to eq('Test Account')
+    end
+  end
+
+  it 'successfully executes an AQuA query for the updated account' do
+    VCR.use_cassette('zuora/get_account_using_aqua') do |cassette|
+      verify_env_is_set if cassette.originally_recorded_at.nil?
+      aqua_queries = [
+          { name: 'Accounts',
+              query: "select Id, Name from Account where Id = '#{$test_account_id_1}'",
+              type: 'zoql' }
+      ]
+      aqua_query_request = { queries: aqua_queries }
+      puts "**** AQUA REQUEST: #{aqua_query_request}"
+      aqua_query_result = $client.aqua_query(aqua_query_request)
+      puts "**** AQUA RESULT: #{aqua_query_result.inspect}"
     end
   end
 

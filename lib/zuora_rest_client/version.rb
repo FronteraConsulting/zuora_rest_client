@@ -1,3 +1,3 @@
 module ZuoraRestClient
-  VERSION = '1.2.1.5'
+  VERSION = '1.2.2.0'
 end

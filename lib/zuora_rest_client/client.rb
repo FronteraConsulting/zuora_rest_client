@@ -237,7 +237,7 @@ module ZuoraRestClient
 
     def aqua_query(request, options = {})
       aqua_query_options = {}.merge(DEFAULT_AQUA_QUERY_OPTIONS).merge(options)
-      result = @connection.app_post('/apps/api/batch-query/', request)
+      result = @connection.rest_post('/batch-query/', request)
       logger.debug "********* AQUA POST QUERY RESULT: #{result.inspect}"
 
       raise "Error: #{result.message}" if result.status.downcase == 'error'
@@ -260,11 +260,11 @@ module ZuoraRestClient
     end
 
     def get_aqua_job_result(job_id)
-      @connection.app_get("/apps/api/batch-query/jobs/#{job_id}")
+      @connection.rest_get("/batch-query/jobs/#{job_id}")
     end
 
     def get_last_aqua_job_result(partner, project)
-      @connection.app_get("/apps/api/batch-query/jobs/partner/#{partner}/project/#{project}")
+      @connection.rest_get("/batch-query/jobs/partner/#{partner}/project/#{project}")
     end
 
     ##############################################################################
@@ -797,12 +797,12 @@ module ZuoraRestClient
       # Check status and if complete, output file to destination IO
       logger.debug "********* FINAL EXPORT STATUS: #{export_record.Status}"
       case export_record.Status
-        when 'Completed'
-          get_file(export_zobject.FileId, destination_io)
-        when 'Canceled'
-          raise "Error downloading file: #{export_record.Status} - #{export_record.StatusReason}"
-        when 'Failed'
-          raise "Error downloading file: #{export_record.Status} - #{export_record.StatusReason}"
+      when 'Completed'
+        get_file(export_zobject.FileId, destination_io)
+      when 'Canceled'
+        raise "Error downloading file: #{export_record.Status} - #{export_record.StatusReason}"
+      when 'Failed'
+        raise "Error downloading file: #{export_record.Status} - #{export_record.StatusReason}"
       end
 
       # If requested, delete export from server
@@ -994,6 +994,12 @@ module ZuoraRestClient
     #  Invoices                                                                  #
     #                                                                            #
     ##############################################################################
+
+    def get_invoice_files(invoice_id, page_size = nil, zuora_version = nil)
+      uri = Addressable::URI.parse("/invoices/#{invoice_id}/files")
+      uri.query_values = { pageSize: page_size.to_s } if !page_size.nil?
+      @connection.rest_get(uri.to_s, zuora_version)
+    end
 
     def reverse_invoice(invoice_id, zuora_version = nil)
       @connection.rest_put("/invoices/#{invoice_id}/reverse", nil, zuora_version)
